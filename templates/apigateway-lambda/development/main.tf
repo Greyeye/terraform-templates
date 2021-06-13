@@ -7,7 +7,7 @@ module "us-east-1" {
   lambda_dist_bucket = var.lambda_dist_bucket
   lambda_dist_key = var.lambda_dist_key
   lambda_sg_name = "${var.project_name}-sg"
-  lambda_name = "var.project_name"
+  lambda_name = var.project_name
   vpc_id = var.vpc_id["us-east-1"]
   vpc_cidr = var.vpc_cidr["us-east-1"]
   acm_arn = var.acm_arns["us-east-1"]
@@ -30,7 +30,7 @@ module "us-west-2" {
   lambda_dist_bucket = var.lambda_dist_bucket
   lambda_dist_key = var.lambda_dist_key
   lambda_sg_name = "${var.project_name}-sg"
-  lambda_name = "var.project_name"
+  lambda_name = var.project_name
   vpc_id = var.vpc_id["us-west-2"]
   vpc_cidr = var.vpc_cidr["us-west-2"]
   acm_arn = var.acm_arns["us-west-2"]
