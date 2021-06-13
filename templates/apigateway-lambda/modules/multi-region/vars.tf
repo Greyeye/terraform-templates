@@ -24,3 +24,5 @@ variable "acm_arn" {}
 variable "api_domain_name" {}
 variable "route53_zone_id" {}
 variable "lambda_policy" {}
+variable "env_variables" {}
+variable "lambda_runtime" {}

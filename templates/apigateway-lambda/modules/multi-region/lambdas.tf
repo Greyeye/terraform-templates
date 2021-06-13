@@ -32,22 +32,13 @@ module "lambda_function" {
   lambda_function_name = local.lambda_name
   lambda_function_handler = "main"
   lambda_role_arn = module.lambda-role.lambda_role_arn
-  lambda_runtime = "go1.x"
+  lambda_runtime = var.lambda_runtime
   lambda_vpc_security_groups = [aws_security_group.allow_tls.id]
   lambda_vpc_subnet_ids = var.lambda_vpc_subnet_ids
-  env_variables = {
-    name = local.lambda_name
-    deploymentid = random_id.server.hex
-    terraform = true
-    dynamoTableName = jsondecode(data.local_file.env_variables.content)["dynamoTableName"]
-  }
+  env_variables = var.env_variables
   lambda_file_hash = module.dist_file.hash
   deploymentID = random_id.server.hex
   environment = var.environment
-}
-
-data "local_file" "env_variables" {
-  filename = "../../config/env_${var.environment}.json"
 }
 
 resource "aws_lambda_permission" "lambda_permission" {

@@ -73,3 +73,8 @@ variable project_name {
   description = "Project Name"
   type = string
 }
+
+variable "lambda_runtime" {
+  description = "lambda run time, please use one from the url https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime"
+  type = string
+}

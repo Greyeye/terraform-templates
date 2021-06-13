@@ -38,3 +38,7 @@ api_domain_name = "customapi.domainname.com"
 route53_zone_id = "Z123456789012"
 
 project_name = "projectName"
+
+# code run time, use value from
+# https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime
+lambda_runtime = "node14.x"
