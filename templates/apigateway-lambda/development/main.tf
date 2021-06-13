@@ -13,6 +13,7 @@ module "us-east-1" {
   acm_arn = var.acm_arns["us-east-1"]
   api_domain_name =  var.api_domain_name
   route53_zone_id = var.route53_zone_id
+  lambda_policy = data.aws_iam_policy_document.lambda_policy.json
 }
 
 module "us-west-2" {
@@ -33,6 +34,7 @@ module "us-west-2" {
   acm_arn = var.acm_arns["us-west-2"]
   api_domain_name =  var.api_domain_name
   route53_zone_id = var.route53_zone_id
+  lambda_policy = data.aws_iam_policy_document.lambda_policy.json
 }
 
 module "r53_healthcheck_useast1" {

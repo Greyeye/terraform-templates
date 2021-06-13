@@ -7,7 +7,7 @@ data "aws_iam_policy_document" "lambda_policy" {
       "logs:PutLogEvents"
     ]
     resources = [
-      "arn:aws:logs:${var.aws_region}:${var.accountnumber}:log-group:/aws/lambda/${local.lambda_name}*"
+      "arn:aws:logs:${var.aws_region}:${var.accountnumber}:log-group:/aws/lambda/${var.project_name}*"
     ]
   }
 
@@ -19,22 +19,6 @@ data "aws_iam_policy_document" "lambda_policy" {
     ]
     resources = [
       "arn:aws:logs:${var.aws_region}:${var.accountnumber}:*"
-    ]
-  }
-  statement {
-    sid = "dynamodb1"
-    actions = [
-      "dynamodb:DescribeTable",
-      "dynamodb:Get*",
-      "dynamodb:Query",
-      "dynamodb:Scan",
-      "dynamodb:Delete*",
-      "dynamodb:Update*",
-      "dynamodb:PutItem"
-
-    ]
-    resources = [
-      "arn:aws:dynamodb:${var.aws_region}:${var.accountnumber}:table*"
     ]
   }
   statement {

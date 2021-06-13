@@ -17,11 +17,10 @@ variable "lambda_dist_bucket" {
 variable "lambda_sg_name" {}
 variable "lambda_name" {}
 variable "lambda_dist_key" {}
-variable "vpc_id" {
-  default = "vpc-08789c303a76dcf84"
-}
+variable "vpc_id" {}
 variable "vpc_cidr"{}
 
 variable "acm_arn" {}
 variable "api_domain_name" {}
 variable "route53_zone_id" {}
+variable "lambda_policy" {}

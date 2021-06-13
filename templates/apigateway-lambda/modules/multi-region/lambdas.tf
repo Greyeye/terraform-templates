@@ -18,7 +18,7 @@ module "lambda-role" {
     Terraform = true
     DeploymentID = random_id.server.hex
   }
-  policy = data.aws_iam_policy_document.lambda_policy.json
+  policy = var.lambda_policy
   deploymentID = random_id.server.hex
   environment = var.environment
 }
