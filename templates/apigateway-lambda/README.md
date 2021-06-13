@@ -38,4 +38,10 @@
 * acm_arns: **map** of ACM certificate to be used with API Gateway Custom domains. Dont use Terraform to deploy ACM, as validation can take more than an hr.
 * api_domain_name: Custom DNS name to be used by API Gateway (must match ACM)
 * route53_zone_id: Route53 Zone ID to be used to update Custom Domain Name of API Gateway
-* project_name: used to define project specific names
+* project_name: used to define project specific names,  
+  please dont make it too long, as some system cannot take more than 64 characters. This template will add 
+  environment and random code to postfix of most names.
+  (*not good* -> my-super-great-project)
+  (*good* -> "msgp")
+  (*end result* -> msgp-development-671711b016dce878)
+* lambda_runtime: specify what runtime lambda will run (eg node14.x)
