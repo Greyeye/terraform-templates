@@ -39,6 +39,7 @@ module "lambda_function" {
   lambda_file_hash = module.dist_file.hash
   deploymentID = random_id.server.hex
   environment = var.environment
+  lambda_timeout = var.lambda_timeout
 }
 
 resource "aws_lambda_permission" "lambda_permission" {

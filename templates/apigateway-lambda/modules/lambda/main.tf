@@ -15,6 +15,7 @@ resource "aws_lambda_function" "lambda-function" {
     variables = var.env_variables
   }
   source_code_hash = var.lambda_file_hash
+  timeout = var.lambda_timeout
 }
 
 resource "aws_cloudwatch_log_group" "apiLambda" {

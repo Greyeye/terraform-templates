@@ -16,6 +16,7 @@ module "us-east-1" {
   lambda_policy = data.aws_iam_policy_document.lambda_policy.json
   env_variables = local.env_variables
   lambda_runtime = var.lambda_runtime
+  lambda_timeout = var.lambda_timeout
 }
 
 module "us-west-2" {
@@ -39,6 +40,7 @@ module "us-west-2" {
   lambda_policy = data.aws_iam_policy_document.lambda_policy.json
   env_variables = local.env_variables
   lambda_runtime = var.lambda_runtime
+  lambda_timeout = var.lambda_timeout
 }
 
 module "r53_healthcheck_useast1" {

@@ -42,3 +42,4 @@ project_name = "projectName"
 # code run time, use value from
 # https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime
 lambda_runtime = "node14.x"
+lambda_timeout = 29

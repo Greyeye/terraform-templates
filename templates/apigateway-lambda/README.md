@@ -45,3 +45,11 @@
   (*good* -> "msgp")
   (*end result* -> msgp-development-671711b016dce878)
 * lambda_runtime: specify what runtime lambda will run (eg node14.x)
+
+
+## FAQ
+
+* How to deploy to just 1 region  
+  You can remove a region from environemnt/main.tf
+* Cloudwatch Log need to be kept longer than 1 week
+  Please increase the date from lambda module's main file, [main.tf](./modules/lambda/main.tf)

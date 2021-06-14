@@ -26,3 +26,4 @@ variable "route53_zone_id" {}
 variable "lambda_policy" {}
 variable "env_variables" {}
 variable "lambda_runtime" {}
+variable "lambda_timeout" {}

@@ -78,3 +78,7 @@ variable "lambda_runtime" {
   description = "lambda run time, please use one from the url https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime"
   type = string
 }
+
+variable "lambda_timeout" {
+  description = "maximum time lambda is allowed to run. If its running behind an API Gateway, timeout should not excees 29secs"
+}
